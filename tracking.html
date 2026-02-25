@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Tracking</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tracking-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .tracking-steps {
+        list-style: none;
+        padding: 0;
+        position: relative;
+    }
+
+    .tracking-steps::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: #ddd;
+    }
+
+    .step {
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .step:last-child {
+        margin-bottom: 0;
+    }
+
+    .step-marker {
+        position: absolute;
+        left: 10px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background: #ddd;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px #ddd;
+    }
+
+    .step.completed .step-marker {
+        background: #4CAF50;
+        box-shadow: 0 0 0 2px #4CAF50;
+    }
+
+    .step-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .step-date {
+        font-size: 0.9em;
+        color: #777;
+    }
+</style>
+</head>
+<body>
+
+<div class="tracking-container">
+    <h2>Order Tracking</h2>
+    <ul class="tracking-steps">
+        <li class="step completed">
+            <div class="step-marker"></div>
+            <div class="step-title">Order Placed</div>
+            <div class="step-date">Feb 15, 2026</div>
+        </li>
+        <li class="step completed">
+            <div class="step-marker"></div>
+            <div class="step-title">Order Confirmed</div>
+            <div class="step-date">Feb 16, 2026</div>
+        </li>
+        <li class="step completed">
+            <div class="step-marker"></div>
+            <div class="step-title">Shipped</div>
+            <div class="step-date">Feb 17, 2026</div>
+        </li>
+        <li class="step">
+            <div class="step-marker"></div>
+            <div class="step-title">Out for Delivery</div>
+            <div class="step-date">Expected: Feb 20, 2026</div>
+        </li>
+        <li class="step">
+            <div class="step-marker"></div>
+            <div class="step-title">Delivered</div>
+            <div class="step-date">Pending</div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
